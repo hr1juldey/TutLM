@@ -1,0 +1,68 @@
+# Ignore Python bytecode files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Ignore distribution and packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+*.manifest
+*.spec
+
+# Ignore log files
+pip-log.txt
+pip-delete-this-directory.txt
+*.log
+
+# Ignore unit test and coverage reports
+htmlcov/
+.tox/
+.coverage
+.coverage.*
+.cache
+.pytest_cache/
+nosetests.xml
+coverage.xml
+*.cover
+.hypothesis/
+
+# Ignore translations
+*.mo
+*.pot
+
+# Ignore PyBuilder target
+target/
+
+# Ignore Jupyter Notebook checkpoints
+.ipynb_checkpoints
+
+# Ignore IPython profile
+profile_default/
+ipython_config.py
+
+# Ignore Python environment directories
+.env
+.venv/
+env/
+venv/
+ENV/
+
+# Ignore IDE specific files
+# PyCharm
+.idea/
+# Visual Studio Code
+.vscode/
