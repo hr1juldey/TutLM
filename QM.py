@@ -131,7 +131,7 @@ class GraphRAG(dspy.Module):
         """Answer a query using the graph and embeddings."""
         
         olm1 = dspy.LM(model="ollama/mistral-nemo:latest", api_base="http://localhost:11434")
-        olm2=  dspy.LM(model="ollama/mathstral", api_base="http://localhost:11434")
+        olm2=  dspy.LM(model="ollama/mathstral:latest", api_base="http://localhost:11434")
         olm3=  dspy.LM(model="ollama/llava:latest", api_base="http://localhost:11434")
         olm4=  dspy.LM(model="ollama/deepseek-coder-v2:latest", api_base="http://localhost:11434")
 
