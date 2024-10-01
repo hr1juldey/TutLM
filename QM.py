@@ -21,10 +21,10 @@ class FindRelevantChunks(dspy.Signature):
     relevant_chunks = dspy.OutputField(desc="Top k relevant chunks from the graph.")
 
 class GenerateAnswer(dspy.Signature):
-    """Generate an answer based on context with detailed explanation."""
-    context = dspy.InputField(desc="Combined context from user and graph.")
+    """Generate an answer based on context with detailed step by step explanation and derivation."""
+    context = dspy.InputField(desc="Combined long form context from user and graph.")
     question = dspy.InputField(desc="The original question.")
-    answer = dspy.OutputField(desc="The generated answer with detailed explanation.")
+    answer = dspy.OutputField(desc="The Final answer with detailed explanation. Use proper markdown or latext syntax for formatting.")
 
 
 class ImgQA(dspy.Signature):
@@ -150,14 +150,16 @@ class GraphRAG(dspy.Module):
 
 
 
-        self.mode=mode
+        self.mode="gen"
+        print(self.mode)
         # Find relevant chunks RAG
-        relevant_chunks_result = self.find_relevant_chunks_predictor(query=query, graph=self.graph,k=25)
         
+        relevant_chunks_result = self.find_relevant_chunks_predictor(query=query, graph=self.graph,k=25)
+    
         # Join relevant chunks
         graph_context = find_most_relevant_chunks(query=relevant_chunks_result.relevant_chunks, graph=self.graph,k=25)
-        
-        
+    
+    
 
         # Combine user context if provided
         context = f"{' '.join(user_context)} {graph_context}" if user_context else graph_context
@@ -166,6 +168,8 @@ class GraphRAG(dspy.Module):
         
         # Generate answer
         self.mode=mode
+        print(self.mode)
+        
         answer_result = self.generate_answer_predictor(context=context, question=query)
         
         return answer_result.answer
