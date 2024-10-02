@@ -149,7 +149,7 @@ class GraphRAG(dspy.Module):
 
 
         self.mode="gen"
-        print(self.mode)
+        #print(self.mode)
         # Find relevant chunks RAG
         
         relevant_chunks_result = self.find_relevant_chunks_predictor(query=query, graph=self.graph,k=25)
@@ -166,7 +166,7 @@ class GraphRAG(dspy.Module):
         
         # Generate answer
         self.mode=mode
-        print(self.mode)
+        #print(self.mode)
         
         answer_result = self.generate_answer_predictor(context=context, question=query)
         

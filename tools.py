@@ -112,7 +112,7 @@ def split_text_into_sections(file):
         
         end=time.time()
         looptime=(end-start)
-        print(f"------------- \n\n chapter completed in {looptime} \n\n\ -------------")
+        print(f"------------- \n\n chapter completed in {looptime} \n\n -------------")
 
     # Use multithreading to process chapters
     cpu_count = os.cpu_count()
