@@ -33,4 +33,4 @@ nltk.download('stopwords')
 
 
 
-os.environ["NETWORKX_AUTOMATIC_BACKENDS"] = "cugraph"
+#os.environ["NETWORKX_AUTOMATIC_BACKENDS"] = "cugraph"
