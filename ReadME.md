@@ -94,7 +94,7 @@ print(answer)
 The system supports four different modes:
 - `gen`: General text processing (default)
 - `mat`: Mathematical computations
-- `vis`: Visual processing
+- `vis`: Visual processing (developer needed)
 - `code`: Code-related queries
 
 ```python
