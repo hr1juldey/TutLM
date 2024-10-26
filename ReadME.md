@@ -11,7 +11,8 @@ A sophisticated graph-based Retrieval-Augmented Generation (RAG) system built wi
 - Parallel processing for efficient document handling
 - Table of Contents (TOC) extraction
 - Customizable embedding generation
-
+- fully local operation
+- 
 ## Installation
 
 ### Dependencies
