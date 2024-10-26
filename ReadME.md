@@ -1,4 +1,4 @@
-# GraphRAG with DSPy
+# TutLM GraphRAG with DSPy
 
 A sophisticated graph-based Retrieval-Augmented Generation (RAG) system built with DSPy and various LLM models for processing and analyzing documents.
 
